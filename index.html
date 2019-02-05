@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <section>
+          <h1>Shells</h1>
+          <section>
+            <h3>Back to Basics</h3><br/>
+            <small>Cuahuctemoc Osorio (Temo)</small><br/>
+            <small>github.com/cclulu</small><br/>
+          </section>
+        </section>
+
+        <section>
+          <h3>What is it?</h3>
+          <section>
+            <p class="fragment"><span>User interface for accessing the operating system's services</span></p>
+            <p class="fragment"><span>(I got that from wikipedia)</span></p>
+            <p class="fragment"><span>another simple way to put it is:</span></p>
+            <p class="fragment"><span>a program that accepts keyboard user input and has the OS perform them</span></p>
+          </section>
+        </section>
+
+        <section>
+          <h3>Shell</h3>
+          <section>
+            <p class="fragment"><span>This is the most basic it can get</span></p>
+            <p class="fragment"><span>not used as much, but still used in someplaces</span></p>
+          </section>
+          <section>
+            <p class="fragment"><span>Places I have seen it be used is on:</span></p>
+            <p class="fragment"><span>docker images</span></p>
+            <p class="fragment"><span>when writing shell scripts</span></p>
+            <p class="fragment"><span>there could probably be more, but ...</span></p>
+          </section>
+        </section>
+
+        <section>
+          <h3>Bash</h3>
+          <section>
+            <p class="fragment"><span>This is what most are familar with</span></p>
+          </section>
+          <section>
+            <p class="fragment"><span>Bourne again shell</span></p>
+            <p class="fragment"><span>very similar to <strong>shell</strong> with some more added features</span></p>
+            <p class="fragment"><span>since it has been made freely available for everyone it has become a standard that a lot of people use</span></p>
+          </section>
+        </section>
+
+        <section>
+          <h3>Focus</h3>
+          <section>
+            <blockquote class="fragment"><span>&ldquo;Good developers copy, </span></br><span class="fragment">Great developers paste&ldquo; </span></br><span class="fragment"> - Kelsey Hightower</span></blockquote>
+          </section>
+        </section>
+
+        <section>
+          <p> 'y' </p></br>
+          <section>
+            <p class="fragment"><span>yank</span></p>
+          </section>
+        </section>
+
+        <section>
+          <p> Yanking </p></br>
+          <section>
+            <p class="fragment"><span>who remembers how to move around?</span></p>
+          </section>
+
+          <section>
+            <p class="fragment"><span>what about getting into visual mode?</span></p>
+          </section>
+
+          <section>
+            <p class="fragment"><span>so just like normal copying, what ever you have highlighted you yank</span></p>
+          </section>
+
+          <section>
+              <img src="res/images/visual_line.png" >
+              <img src="res/images/visual_block.png" >
+              <img src="res/images/visual_simple.png" >
+          </section>
+
+          <section>
+            <p><span>You can also yank without highlighting</span></p>
+              <pre class="fragment">
+               <code>
+               yy
+               yw
+               yt
+               yT
+               </code>
+              </pre>
+          </section>
+        </section>
+
+        <section>
+          <p><span>T</span></p>
+          <section>
+            <p class="fragment"><span>to ~</span></p>
+            <p class="fragment"><span>I have not mentioned this one before</span></p>
+            <p class="fragment"><span>This a movement/modifier key</span></p>
+          </section>
+        </section>
+
+        <section>
+          <p> 'p' </p></br>
+          <section>
+            <p class="fragment"><span>paste/put</span></p>
+          </section>
+        </section>
+
+        <section>
+          <p> put </p></br>
+          <section>
+            <p class="fragment"><span>there is not much to this one</span></p>
+            <p class="fragment"><span>lowercase 'p' will paste in front of your cursor</span></p>
+            <p class="fragment"><span>uppercase 'P' will paste in behind of your cursor</span></p>
+          </section>
+        </section>
+
+        <section>
+          <p> side note: </p></br>
+          <section>
+            <p class="fragment"><span>One more thing</span></p>
+            <p class="fragment"><span>vim has its own buffer</span></p>
+            <p class="fragment"><span>but there is way to use your own computers buffer</span></p>
+          </section>
+
+          <section>
+            <p class="fragment"><span>go into insert mode</span></p>
+            <p class="fragment"><span>ctrl-v (cmd-v)</span></p>
+          </section>
+
+          <section>
+              <pre class="fragment">
+               <code>
+               :r !pbpaste
+               </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre class="fragment">
+               <code>
+set clipboard=unnamed "lets you use the os clipboard when yanking or putting
+               </code>
+              </pre>
+          </section>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

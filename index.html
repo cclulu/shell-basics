@@ -40,7 +40,7 @@
             <p class="fragment"><span>User interface for accessing the operating system's services</span></p>
             <p class="fragment"><span>(I got that from wikipedia)</span></p>
             <p class="fragment"><span>another simple way to put it is:</span></p>
-            <p class="fragment"><span>a program that accepts keyboard user input and has the OS perform them</span></p>
+            <p class="fragment"><span>a program that takes in user input and has the OS perform the tasks</span></p>
           </section>
         </section>
 
@@ -50,12 +50,17 @@
             <p class="fragment"><span>This is the most basic it can get</span></p>
             <p class="fragment"><span>not used as much, but still used in someplaces</span></p>
           </section>
+
           <section>
             <p class="fragment"><span>Places I have seen it be used is on:</span></p>
             <p class="fragment"><span>docker images</span></p>
             <p class="fragment"><span>when writing shell scripts</span></p>
             <p class="fragment"><span>there could probably be more, but ...</span></p>
           </section>
+          <!-- <section> -->
+          <!--   <p class="fragment"><span>most commonly seen:</span></p> -->
+          <!--   <p class="fragment"><span>#!/bin/sh</span></p> -->
+          <!-- </section> -->
         </section>
 
         <section>
@@ -71,104 +76,55 @@
         </section>
 
         <section>
-          <h3>Focus</h3>
+          <h3>zsh</h3>
           <section>
-            <blockquote class="fragment"><span>&ldquo;Good developers copy, </span></br><span class="fragment">Great developers paste&ldquo; </span></br><span class="fragment"> - Kelsey Hightower</span></blockquote>
+            <p class="fragment"><span>it is an "upgraded" version of bash</span></p>
+            <p class="fragment"><span>but apparently not as portable</span></p>
+            <img src="res/images/zsh_logo.png" >
+          </section>
+          <section>
+            <p class="fragment"><span>Frameworks make it easier to use</span></p>
+            <p class="fragment"><span>some notable ones are:</span></p>
+            <p class="fragment"><span><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></span></p>
+            <p class="fragment"><span><a href="https://github.com/sorin-ionescu/prezto">prezto</a></span></p>
+            <img src="res/images/zsh_logo.png" >
           </section>
         </section>
 
         <section>
-          <p> 'y' </p></br>
+          <h3>fish</h3>
           <section>
-            <p class="fragment"><span>yank</span></p>
+            <p class="fragment"><span>it is an "upgraded" version of bash as well</span></p>
+            <p class="fragment"><span>so it is similar to zsh, but</span></p>
+            <p class="fragment"><span>a lot of the customization is already done for you</span></p>
+            <img src="res/images/Fish_shell_logo_ascii.png" >
           </section>
         </section>
 
         <section>
-          <p> Yanking </p></br>
+          <h3>others</h3>
           <section>
-            <p class="fragment"><span>who remembers how to move around?</span></p>
-          </section>
-
-          <section>
-            <p class="fragment"><span>what about getting into visual mode?</span></p>
-          </section>
-
-          <section>
-            <p class="fragment"><span>so just like normal copying, what ever you have highlighted you yank</span></p>
-          </section>
-
-          <section>
-              <img src="res/images/visual_line.png" >
-              <img src="res/images/visual_block.png" >
-              <img src="res/images/visual_simple.png" >
-          </section>
-
-          <section>
-            <p><span>You can also yank without highlighting</span></p>
-              <pre class="fragment">
-               <code>
-               yy
-               yw
-               yt
-               yT
-               </code>
-              </pre>
+            <p class="fragment"><span>so there are a lot more but these the more "popular" ones that I know of</span></p>
+            <p class="fragment"><span>there is:</span></p>
+            <p class="fragment"><span>command shell and powershell which is used on windows machines</span></p>
+            <p class="fragment"><span>KSH (which was developed by AT&T)</span></p>
+            <p class="fragment"><span>CSH (made scripts look more like the C language)</span></p>
           </section>
         </section>
 
         <section>
-          <p><span>T</span></p>
+          <h3>Great, now what?</h3>
           <section>
-            <p class="fragment"><span>to ~</span></p>
-            <p class="fragment"><span>I have not mentioned this one before</span></p>
-            <p class="fragment"><span>This a movement/modifier key</span></p>
+            <p class="fragment"><span>we will talk about how can we start using these shells</span></p>
+            <p class="fragment"><span>or rather what kind information they can tell us</span></p>
           </section>
         </section>
 
         <section>
-          <p> 'p' </p></br>
+          <h3>Scripting</h3>
           <section>
-            <p class="fragment"><span>paste/put</span></p>
-          </section>
-        </section>
-
-        <section>
-          <p> put </p></br>
-          <section>
-            <p class="fragment"><span>there is not much to this one</span></p>
-            <p class="fragment"><span>lowercase 'p' will paste in front of your cursor</span></p>
-            <p class="fragment"><span>uppercase 'P' will paste in behind of your cursor</span></p>
-          </section>
-        </section>
-
-        <section>
-          <p> side note: </p></br>
-          <section>
-            <p class="fragment"><span>One more thing</span></p>
-            <p class="fragment"><span>vim has its own buffer</span></p>
-            <p class="fragment"><span>but there is way to use your own computers buffer</span></p>
-          </section>
-
-          <section>
-            <p class="fragment"><span>go into insert mode</span></p>
-            <p class="fragment"><span>ctrl-v (cmd-v)</span></p>
-          </section>
-
-          <section>
-              <pre class="fragment">
-               <code>
-               :r !pbpaste
-               </code>
-              </pre>
-          </section>
-
-          <section>
-              <pre class="fragment">
-               <code>
-set clipboard=unnamed "lets you use the os clipboard when yanking or putting
-               </code>
-              </pre>
+            <p class="fragment"><span>we will talk about how can we start using these shells</span></p>
+            <p class="fragment"><span>or rather what kind information they can tell us</span></p>
           </section>
         </section>
 

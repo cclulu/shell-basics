@@ -102,7 +102,7 @@
         <section>
           <h3>others</h3>
           <section>
-            <p class="fragment"><span>so there are a lot more but these the more "popular" ones that I know of</span></p>
+            <p class="fragment"><span>so there are a lot more but these are the more "popular" ones that I know of</span></p>
             <p class="fragment"><span>there is:</span></p>
             <p class="fragment"><span>command shell and powershell which is used on windows machines</span></p>
             <p class="fragment"><span>KSH (which was developed by AT&T)</span></p>
@@ -148,10 +148,165 @@
 
         <section>
           <h3>permissons</h3>
+
           <section>
-            <p class="fragment"><span>we will talk about how can we start using these shells</span></p>
-            <p class="fragment"><span>or rather what kind information they can tell us</span></p>
+            <p class="fragment"><span>when trying the run a script (./scriptname) you usually can't at first</span></p>
+            <p class="fragment"><span>reason being is because you usually don't have permission to</span></p>
+            <p class="fragment"><span>but how do you know what permissions you have?</span></p>
           </section>
+
+          <section>
+              <pre>
+               <code>
+               ls
+               </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre>
+               <code>
+CCLulu∴~/workspace/shell-basics⨕master⚡
+ ⤕  ls
+CONTRIBUTING.md   Gruntfile.js      LICENSE           README.md         bower.json        css               demo.html         index.html        js                lib               node_modules      package-lock.json package.json      plugin            res
+               </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre>
+               <code>
+               ls -la
+               </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre>
+               <code>
+CCLulu∴~/workspace/shell-basics⨕master⚡
+ ⤕  ls -la
+total 496
+drwxr-xr-x   21 Cuahuc  staff     672 Feb  5 13:24 .
+drwxr-xr-x   44 Cuahuc  staff    1408 Feb  5 09:44 ..
+-rw-r--r--@   1 Cuahuc  staff    8196 Feb  5 13:08 .DS_Store
+drwxr-xr-x   12 Cuahuc  staff     384 Feb  5 13:09 .git
+-rw-r--r--    1 Cuahuc  staff     142 Feb  5 07:48 .gitignore
+-rw-r--r--    1 Cuahuc  staff      75 Feb  5 07:48 .travis.yml
+-rw-r--r--    1 Cuahuc  staff    1062 Feb  5 07:48 CONTRIBUTING.md
+-rw-r--r--    1 Cuahuc  staff    3749 Feb  5 07:48 Gruntfile.js
+-rw-r--r--    1 Cuahuc  staff    1103 Feb  5 07:48 LICENSE
+-rw-r--r--    1 Cuahuc  staff     226 Feb  5 08:27 README.md
+-rw-r--r--    1 Cuahuc  staff     512 Feb  5 07:48 bower.json
+drwxr-xr-x    6 Cuahuc  staff     192 Feb  5 07:48 css
+-rw-r--r--    1 Cuahuc  staff   16240 Feb  5 07:48 demo.html
+-rw-r--r--    1 Cuahuc  staff    7828 Feb  5 13:24 index.html
+drwxr-xr-x    4 Cuahuc  staff     128 Feb  5 08:28 js
+drwxr-xr-x    5 Cuahuc  staff     160 Feb  5 07:48 lib
+drwxr-xr-x  466 Cuahuc  staff   14912 Feb  5 07:51 node_modules
+-rw-r--r--    1 Cuahuc  staff  182915 Feb  5 07:51 package-lock.json
+-rw-r--r--    1 Cuahuc  staff    1066 Feb  5 07:48 package.json
+drwxr-xr-x   11 Cuahuc  staff     352 Feb  5 07:48 plugin
+drwxr-xr-x    4 Cuahuc  staff     128 Feb  5 09:19 res
+               </code>
+              </pre>
+          </section>
+
+          <section>
+            <p ><span>but why do this?</span></p>
+          </section>
+
+          <section>
+              <pre>
+               <code>
+-rw-r--r--    1 Cuahuc  staff    7828 Feb  5 13:24 index.html
+drwxr-xr-x    4 Cuahuc  staff     128 Feb  5 08:28 js
+               </code>
+              </pre>
+          </section>
+
+          <section>
+            <p ><span>let's break it down</span></p>
+          </section>
+
+          <section>
+              <pre>
+               <code>
+   r w x
+   1 1 1 = 7
+   1 1 0 = 6
+   1 0 1 = 5
+   1 0 0 = 4
+   0 1 1 = 3
+   0 1 0 = 2
+   0 0 1 = 1
+   0 0 0 = 0
+               </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre>
+                <code>
+User Group World
+rwx  rwx   rwx
+                </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre>
+                <code>
+r w x | r w x |  r w x
+1 1 1 | 1 1 1 |  1 1 1 = 777
+1 1 1 | 1 0 1 |  1 0 1 = 755
+1 1 1 | 1 0 0 |  1 0 0 = 744
+                </code>
+              </pre>
+          </section>
+
+          <section>
+              <pre>
+               <code>
+-rw-r--r--    1 Cuahuc  staff    7828 Feb  5 13:24 index.html
+drwxr-xr-x    4 Cuahuc  staff     128 Feb  5 08:28 js
+               </code>
+              </pre>
+
+              <pre class="fragment">
+                <code>
+r w x | r w x |  r w x
+1 1 1 | 1 0 1 |  1 0 1 = 755
+1 1 0 | 1 0 0 |  1 0 0 = 644
+                </code>
+              </pre>
+          </section>
+
+          <section>
+            <p ><span>Great, but how do I run it from anywhere?</span></p>
+            <p class="fragment"><span>put in the PATH!!!</span></p>
+          </section>
+        </section>
+
+        <section>
+          <h3>PATH</h3>
+
+          <section>
+            <p class="fragment"><span>Is the place where your OS looks for where to run the binary</span></p>
+
+            <pre class="fragment">
+              <code>
+              echo $PATH
+              </code>
+            </pre>
+
+            <pre class="fragment">
+              <code>
+    /usr/local/bin:/usr/bin:/bin/:sbin/
+              </code>
+            </pre>
+          </section>
+
         </section>
 
 			</div>

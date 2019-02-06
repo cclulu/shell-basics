@@ -21,10 +21,10 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 	</head>
+
 	<body>
 		<div class="reveal">
 			<div class="slides">
-
         <section>
           <h1>Shells</h1>
           <section>
@@ -37,30 +37,29 @@
         <section>
           <h3>What is it?</h3>
           <section>
-            <p class="fragment"><span>User interface for accessing the operating system's services</span></p>
+            <p class="fragment"><span>User interface for accessing the operating system's services.</span></p>
             <p class="fragment"><span>(I got that from wikipedia)</span></p>
-            <p class="fragment"><span>another simple way to put it is:</span></p>
-            <p class="fragment"><span>a program that takes in user input and has the OS perform the tasks</span></p>
+          </section>
+
+          <section>
+            <p class="fragment"><span>Another simple way to put it is:</span></p>
+            <p class="fragment"><span>- A program that takes in user input and has the OS perform the tasks.</span></p>
           </section>
         </section>
 
         <section>
-          <h3>Shell</h3>
+          <h3>Shells</h3>
           <section>
-            <p class="fragment"><span>This is the most basic it can get</span></p>
-            <p class="fragment"><span>not used as much, but still used in someplaces</span></p>
+            <p class="fragment"><span>This is the most basic it can get, not used as much, but still used in someplaces.</span></p>
           </section>
 
           <section>
-            <p class="fragment"><span>Places I have seen it be used is on:</span></p>
-            <p class="fragment"><span>docker images</span></p>
-            <p class="fragment"><span>when writing shell scripts</span></p>
-            <p class="fragment"><span>there could probably be more, but ...</span></p>
+            <p class="fragment"><span>Places I have seen it used before:</span></p>
+            <ul>
+              <li class="fragment"><span>docker images</span></li>
+              <li class="fragment"><span>when writing shell scripts</span></li>
+            </ul>
           </section>
-          <!-- <section> -->
-          <!--   <p class="fragment"><span>most commonly seen:</span></p> -->
-          <!--   <p class="fragment"><span>#!/bin/sh</span></p> -->
-          <!-- </section> -->
         </section>
 
         <section>
@@ -70,20 +69,18 @@
           </section>
           <section>
             <p class="fragment"><span>Bourne again shell</span></p>
-            <p class="fragment"><span>very similar to <strong>shell</strong> with some more added features</span></p>
-            <p class="fragment"><span>since it has been made freely available for everyone it has become a standard that a lot of people use</span></p>
+            <p class="fragment"><span>- Very similar to <strong>shell</strong> with some more added features.</span></p>
+            <p class="fragment"><span>- Since it has been made freely available for everyone, it has become a standard that a lot of people use.</span></p>
           </section>
         </section>
 
         <section>
           <h3>zsh</h3>
           <section>
-            <p class="fragment"><span>it is an "upgraded" version of bash</span></p>
-            <p class="fragment"><span>but apparently not as portable</span></p>
+            <p class="fragment"><span>It is an "upgraded" version of bash, with some feature built in improvements, i.e. tab complete commands.</span></p>
           </section>
           <section>
-            <p class="fragment"><span>Frameworks make it easier to use</span></p>
-            <p class="fragment"><span>some notable ones are:</span></p>
+            <p class="fragment"><span>Here are some notable frameworks that make it easier to use: </span></p>
             <p class="fragment"><span><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a></span></p>
             <p class="fragment"><span><a href="https://github.com/sorin-ionescu/prezto">prezto</a></span></p>
           </section>
@@ -92,9 +89,7 @@
         <section>
           <h3>fish</h3>
           <section>
-            <p class="fragment"><span>it is an "upgraded" version of bash as well</span></p>
-            <p class="fragment"><span>so it is similar to zsh, but</span></p>
-            <p class="fragment"><span>a lot of the customization is already done for you</span></p>
+            <p class="fragment"><span>This is similar to zsh, but a lot of the customization is already done for you.</span></p>
             <img src="res/images/Fish_shell_logo_ascii.png" >
           </section>
         </section>
@@ -102,19 +97,19 @@
         <section>
           <h3>others</h3>
           <section>
-            <p class="fragment"><span>so there are a lot more but these are the more "popular" ones that I know of</span></p>
-            <p class="fragment"><span>there is:</span></p>
-            <p class="fragment"><span>command shell and powershell which is used on windows machines</span></p>
-            <p class="fragment"><span>KSH (which was developed by AT&T)</span></p>
-            <p class="fragment"><span>CSH (made scripts look more like the C language)</span></p>
+            <p class="fragment"><span>There are a lot more but these are the more "popular" ones that I am aware of there is:</span></p>
+            <ul>
+              <li class="fragment"><span>command shell & powershell (windows)</span></li>
+              <li class="fragment"><span>KSH (which was developed by AT&T)</span></li>
+              <li class="fragment"><span>CSH (made scripts look more like the C language)</span></li>
+            </ul>
           </section>
         </section>
 
         <section>
           <h3>Great, now what?</h3>
           <section>
-            <p class="fragment"><span>we will talk about how can we start using these shells</span></p>
-            <p class="fragment"><span>or rather what kind information they can tell us</span></p>
+            <p class="fragment"><span>We will talk about how we can start using these shells or rather what kind of information we can get.</span></p>
           </section>
         </section>
 
@@ -122,7 +117,7 @@
           <h3>Scripting</h3>
           <section>
             <p class="fragment"><span>'#!/bin/sh'</span></p>
-            <p class="fragment"><span>but what is it?</span></p>
+            <p class="fragment"><span>What is it?</span></p>
           </section>
 
           <section>
@@ -136,12 +131,11 @@
 
           <section>
             <p><span>#!</span></p>
-            <p class="fragment"><span>basicly says which interpreter to use</span></p>
+            <p class="fragment"><span>Basicly says which interpreter to use.</span></p>
             <p class="fragment"><span>#!/bin/bash</span></p>
             <p class="fragment"><span>#!/bin/sh</span></p>
             <p class="fragment"><span>#!/bin/csh</span></p>
             <p class="fragment"><span>#!/usr/bin/perl</span></p>
-            <p class="fragment"><span>basically</span></p>
             <p class="fragment"><span>#!/path/to/interpreter</span></p>
           </section>
         </section>
@@ -150,9 +144,8 @@
           <h3>permissons</h3>
 
           <section>
-            <p class="fragment"><span>when trying the run a script (./scriptname) you usually can't at first</span></p>
-            <p class="fragment"><span>reason being is because you usually don't have permission to</span></p>
-            <p class="fragment"><span>but how do you know what permissions you have?</span></p>
+            <p class="fragment"><span>When trying to run a script (./scriptname) you are usually unable to run it at first.</span></p>
+            <p class="fragment"><span>The reason being, you usually don't have permission to.</span></p>
           </section>
 
           <section>
@@ -213,7 +206,7 @@ drwxr-xr-x    4 Cuahuc  staff     128 Feb  5 09:19 res
           </section>
 
           <section>
-            <p ><span>but why do this?</span></p>
+            <p ><span>Why do this?</span></p>
           </section>
 
           <section>
@@ -226,7 +219,7 @@ drwxr-xr-x    4 Cuahuc  staff     128 Feb  5 08:28 js
           </section>
 
           <section>
-            <p ><span>let's break it down</span></p>
+            <p ><span>Let's break it down</span></p>
           </section>
 
           <section>
@@ -284,7 +277,7 @@ r w x | r w x |  r w x
 
           <section>
             <p ><span>Great, but how do I run it from anywhere?</span></p>
-            <p class="fragment"><span>put in the PATH!!!</span></p>
+            <p class="fragment"><span>Put in the PATH!</span></p>
           </section>
         </section>
 
@@ -302,9 +295,13 @@ r w x | r w x |  r w x
 
             <pre class="fragment">
               <code>
-    /usr/local/bin:/usr/bin:/bin/:sbin/
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/localadmin/bin:/Users/cuahuctemocosorio/bin:/Users/cuahuctemocosorio/go/bin
               </code>
             </pre>
+          </section>
+
+          <section>
+            <p class="fragment"><span></span></p>
           </section>
 
         </section>
